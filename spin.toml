@@ -1,0 +1,14 @@
+spin_version = "1"
+authors = ["Mikkel Mørk Hegnhøj <mikkel@fermyon.com>"]
+description = ""
+name = "friday"
+trigger = { type = "http", base = "/" }
+version = "0.1.0"
+
+[[component]]
+id = "friday"
+source = "target/wasm32-wasi/release/friday.wasm"
+[component.trigger]
+route = "/..."
+[component.build]
+command = "cargo build --target wasm32-wasi --release"
