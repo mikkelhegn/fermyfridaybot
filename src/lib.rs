@@ -53,11 +53,11 @@ fn friday(req: Request) -> Result<Response> {
     let resp = match now.weekday() {
         Weekday::Fri => SlackSlashResponse {
             response_type: ResponseType::InChannel,
-            text: "It's Friday, where I'm at!".to_string(),
+            text: "It's Friday in the Fermyon Cloud 🥳".to_string(),
         },
         _ => SlackSlashResponse {
             response_type: ResponseType::InChannel,
-            text: "It's not Friday, where I'm at!".to_string(),
+            text: "It's not Friday in the Fermyon Cloud 🫤".to_string(),
         },
     };
 
